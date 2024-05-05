@@ -1,0 +1,64 @@
+/* General Styles */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Board Styling */
+.board {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Adjust based on the number of columns */
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.row {
+  display: contents;
+}
+
+/* Peg Styling */
+.peg {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  background: #eee;
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.peg:hover {
+  transform: scale(1.1);
+}
+
+.peg:active {
+  transform: scale(0.9);
+}
+
+/* Customizing pegs when they have a peg (are active) */
+.peg[style*="black"] {
+  background: linear-gradient(145deg, #333, #000);
+  border-color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .peg {
+    width: 30px;
+    height: 30px;
+  }
+}
